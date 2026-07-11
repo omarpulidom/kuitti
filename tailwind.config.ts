@@ -15,52 +15,99 @@ const config: Config = {
     extend: {
       colors: Colors,
       fontFamily: {
-        montserrat: [
-          AppFontNames.Montserrat_500Medium,
+        doto: [
+          AppFontNames.Doto_400Regular,
         ],
-        'montserrat-thin': [
-          AppFontNames.Montserrat_100Thin,
+        'doto-thin': [
+          AppFontNames.Doto_100Thin,
         ],
-        'montserrat-extralight': [
-          AppFontNames.Montserrat_200ExtraLight,
+        'doto-extralight': [
+          AppFontNames.Doto_200ExtraLight,
         ],
-        'montserrat-light': [
-          AppFontNames.Montserrat_300Light,
+        'doto-light': [
+          AppFontNames.Doto_300Light,
         ],
-        'montserrat-regular': [
-          AppFontNames.Montserrat_400Regular,
+        'doto-regular': [
+          AppFontNames.Doto_400Regular,
         ],
-        'montserrat-medium': [
-          AppFontNames.Montserrat_500Medium,
+        'doto-medium': [
+          AppFontNames.Doto_500Medium,
         ],
-        'montserrat-semibold': [
-          AppFontNames.Montserrat_600SemiBold,
+        'doto-semibold': [
+          AppFontNames.Doto_600SemiBold,
         ],
-        'montserrat-bold': [
-          AppFontNames.Montserrat_700Bold,
+        'doto-bold': [
+          AppFontNames.Doto_700Bold,
         ],
-        'montserrat-extrabold': [
-          AppFontNames.Montserrat_800ExtraBold,
+        'doto-extrabold': [
+          AppFontNames.Doto_800ExtraBold,
         ],
-        'montserrat-black': [
-          AppFontNames.Montserrat_900Black,
+        'doto-black': [
+          AppFontNames.Doto_900Black,
         ],
 
-        sans: [
-          AppFontNames.Montserrat_500Medium,
-          'sans-serif',
+        didot: [
+          AppFontNames.GFSDidot_400Regular,
+          'serif',
         ],
-        mono: [
-          AppFontNames.Montserrat_500Medium,
+
+        'geist-mono': [
+          AppFontNames.GeistMono_400Regular,
           'monospace',
         ],
-        primary: [
-          AppFontNames.Montserrat_500Medium,
-          'sans-serif',
+        'geist-mono-thin': [
+          AppFontNames.GeistMono_100Thin,
         ],
-        secondary: [
-          AppFontNames.Montserrat_500Medium,
-          'sans-serif',
+        'geist-mono-extralight': [
+          AppFontNames.GeistMono_200ExtraLight,
+        ],
+        'geist-mono-light': [
+          AppFontNames.GeistMono_300Light,
+        ],
+        'geist-mono-regular': [
+          AppFontNames.GeistMono_400Regular,
+        ],
+        'geist-mono-medium': [
+          AppFontNames.GeistMono_500Medium,
+        ],
+        'geist-mono-semibold': [
+          AppFontNames.GeistMono_600SemiBold,
+        ],
+        'geist-mono-bold': [
+          AppFontNames.GeistMono_700Bold,
+        ],
+        'geist-mono-extrabold': [
+          AppFontNames.GeistMono_800ExtraBold,
+        ],
+        'geist-mono-black': [
+          AppFontNames.GeistMono_900Black,
+        ],
+        'geist-mono-thin-italic': [
+          AppFontNames.GeistMono_100Thin_Italic,
+        ],
+        'geist-mono-extralight-italic': [
+          AppFontNames.GeistMono_200ExtraLight_Italic,
+        ],
+        'geist-mono-light-italic': [
+          AppFontNames.GeistMono_300Light_Italic,
+        ],
+        'geist-mono-italic': [
+          AppFontNames.GeistMono_400Regular_Italic,
+        ],
+        'geist-mono-medium-italic': [
+          AppFontNames.GeistMono_500Medium_Italic,
+        ],
+        'geist-mono-semibold-italic': [
+          AppFontNames.GeistMono_600SemiBold_Italic,
+        ],
+        'geist-mono-bold-italic': [
+          AppFontNames.GeistMono_700Bold_Italic,
+        ],
+        'geist-mono-extrabold-italic': [
+          AppFontNames.GeistMono_800ExtraBold_Italic,
+        ],
+        'geist-mono-black-italic': [
+          AppFontNames.GeistMono_900Black_Italic,
         ],
       },
     },
