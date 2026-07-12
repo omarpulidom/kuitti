@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Text, Image, ImageBackground, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { GrainyImage } from "@/components/Skia";
 import { Pdf417View } from "@reeq/react-native-pdf417";
 
 const cardBackground = require("@/assets/images/id_card_bg.png");
 const photo = require("@/assets/mock/omar.png");
-const idCard = require("@/assets/mock/id.png");
 const signature = require("@/assets/mock/sign.png");
 
 export default function HomeTab() {
@@ -18,6 +18,7 @@ export default function HomeTab() {
       width: cardRenderSize.width * 0.29,
       height: cardRenderSize.height * 0.61,
     },
+    grain: cardRenderSize.height * 0.22,
     barcode: {
       width: cardRenderSize.width * 0.29,
       height: cardRenderSize.height * 0.1,
@@ -39,7 +40,7 @@ export default function HomeTab() {
 
   return (
     <SafeAreaView className="flex-1 items-center justify-center bg-gray-50">
-      <Text>Home</Text>
+      <Text>ID</Text>
       <View className="w-full p-4 items-center justify-center">
         <ImageBackground
           source={cardBackground}
@@ -58,20 +59,27 @@ export default function HomeTab() {
             <View className="flex-row">
               {/* Left Column: Photo + Barcode */}
               <View>
-                <Image
+                <View
+                  className="border-[0.2px] border-[#A9A9A9]"
                   style={{
-                    width: sizes.photo.width,
-                    height: sizes.photo.height,
                     borderRadius: sizes.padding * 0.45,
                   }}
-                  source={photo}
-                />
+                >
+                  <GrainyImage
+                    source={photo}
+                    width={sizes.photo.width}
+                    height={sizes.photo.height}
+                    borderRadius={sizes.padding * 0.45}
+                    grainTileSize={sizes.grain}
+                  />
+                </View>
                 <Pdf417View
                   text="@omarpm"
                   style={{
                     height: sizes.barcode.height,
                     width: sizes.barcode.width,
                     marginTop: sizes.padding * 0.375,
+                    mixBlendMode: "color-burn",
                   }}
                 />
               </View>
@@ -235,26 +243,28 @@ export default function HomeTab() {
                         >
                           SIGNATURE
                         </Text>
-                        <Image
-                          style={{
-                            height: sizes.signature.height,
-                            width: sizes.signature.width,
-                            resizeMode: "contain",
-                          }}
-                          source={signature}
-                        />
+                        <View style={{ mixBlendMode: "darken" }}>
+                          <Image
+                            style={{
+                              height: sizes.signature.height,
+                              width: sizes.signature.width,
+                              resizeMode: "contain",
+                            }}
+                            source={signature}
+                          />
+                        </View>
                       </View>
                     </View>
                   </View>
                   {/* Photo */}
-                  <View>
-                    <Image
-                      style={{
-                        width: sizes.photo.width * 0.425,
-                        height: sizes.photo.height * 0.425,
-                        borderRadius: sizes.padding * 0.25,
-                      }}
+                  <View style={{ mixBlendMode: "color-burn" }}>
+                    <GrainyImage
                       source={photo}
+                      width={sizes.photo.width * 0.425}
+                      height={sizes.photo.height * 0.425}
+                      borderRadius={sizes.padding * 0.25}
+                      grainTileSize={sizes.grain}
+                      grayscale
                     />
                   </View>
                 </View>
@@ -276,14 +286,6 @@ export default function HomeTab() {
             </View>
           </View>
         </ImageBackground>
-
-        <ImageBackground
-          source={idCard}
-          style={{
-            width: "100%",
-            aspectRatio: cardWidth / cardHeight,
-          }}
-        ></ImageBackground>
       </View>
     </SafeAreaView>
   );
