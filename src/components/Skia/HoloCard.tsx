@@ -33,7 +33,7 @@ const SHIMMER_COLORS = [
 ];
 const SHIMMER_POSITIONS = [0, 0.17, 0.35, 0.5, 0.65, 0.82, 1];
 
-interface TiltCardShimmerProps {
+interface HoloCardProps {
   maxAngle?: number;
   width: number;
   height: number;
@@ -48,14 +48,14 @@ function clamp(v: number, min: number, max: number) {
   return Math.min(Math.max(v, min), max);
 }
 
-export const TiltCardShimmer = ({
+export const HoloCard = ({
   children,
   maxAngle = 8,
   width,
   height,
   borderRadius = 12,
   style,
-}: PropsWithChildren<TiltCardShimmerProps>) => {
+}: PropsWithChildren<HoloCardProps>) => {
   const rotateX = useSharedValue(0);
   const rotateY = useSharedValue(0);
   const holoImage = useImage(HOLO_TEXTURE);
