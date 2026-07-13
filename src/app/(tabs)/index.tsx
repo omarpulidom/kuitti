@@ -29,12 +29,9 @@ export default function HomeTab() {
     },
     title: cardRenderSize.height * 0.091,
     subtitle: cardRenderSize.height * 0.04,
-
     itemTitle: cardRenderSize.height * 0.03,
     itemContent: cardRenderSize.height * 0.051,
-
     padding: cardRenderSize.height * 0.081,
-
     footer: cardRenderSize.height * 0.025,
   };
 
