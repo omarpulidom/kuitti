@@ -4,6 +4,7 @@ import {
   Fill,
   Group,
   ImageShader,
+  Paint,
   Shader,
   Skia,
   useImage,
@@ -14,13 +15,8 @@ import type {
   SkRuntimeEffect,
   SkShader,
 } from "@shopify/react-native-skia";
-import {
-  FilterMode,
-  MipmapMode,
-  TileMode,
-} from "@shopify/react-native-skia";
+import { FilterMode, MipmapMode, TileMode } from "@shopify/react-native-skia";
 import { useMemo } from "react";
-import type { ReactNode } from "react";
 
 const GRAIN_TEXTURE = require("@/assets/textures/grain.png");
 
@@ -45,7 +41,6 @@ type Props = {
   grainTileSize?: number;
   grainOpacity?: number;
   grayscale?: boolean;
-  overlays?: ReactNode;
 };
 
 export const GrainyImage = ({
@@ -54,11 +49,10 @@ export const GrainyImage = ({
   height,
   borderRadius = 0,
   fit = "cover",
-  blur = 2,
+  blur = 0.3,
   grainTileSize = 128,
-  grainOpacity = 0.3,
+  grainOpacity = 0.32,
   grayscale = false,
-  overlays,
 }: Props) => {
   const image = useImage(source);
   const grainImage = useImage(GRAIN_TEXTURE);
@@ -88,16 +82,18 @@ export const GrainyImage = ({
   if (!image || !grainPaint) return null;
 
   const imageShader = (
-    <ImageShader
-      image={image}
-      fit={fit}
-      rect={{ x: 0, y: 0, width, height }}
-    />
+    <ImageShader image={image} fit={fit} rect={{ x: 0, y: 0, width, height }} />
   );
 
   return (
     <Canvas style={{ width, height, borderRadius, overflow: "hidden" }}>
-      <Blur blur={blur}>
+      <Group
+        layer={
+          <Paint>
+            <Blur blur={blur} />
+          </Paint>
+        }
+      >
         <Fill>
           {grayscale ? (
             <Shader source={grayscaleShader}>{imageShader}</Shader>
@@ -105,13 +101,11 @@ export const GrainyImage = ({
             imageShader
           )}
         </Fill>
-      </Blur>
 
-      <Group opacity={grainOpacity}>
-        <Fill paint={grainPaint} />
+        <Group opacity={grainOpacity}>
+          <Fill paint={grainPaint} />
+        </Group>
       </Group>
-
-      {overlays}
     </Canvas>
   );
 };
