@@ -17,6 +17,7 @@ export default function ProfileTab() {
     gap: ticketRenderSize.width * 0.023,
     barcode: ticketRenderSize.width * 0.1,
     watermark: ticketRenderSize.width * 0.04,
+    edge: ticketRenderSize.width * 0.021,
   };
 
   return (
@@ -29,11 +30,28 @@ export default function ProfileTab() {
           });
         }}
       >
+        <View className="flex-row">
+          {Array.from({ length: 24 }).map((_, i) => (
+            <View
+              key={i}
+              style={{
+                width: 0,
+                height: 0,
+                borderLeftWidth: sizes.edge,
+                borderRightWidth: sizes.edge,
+                borderTopWidth: sizes.edge * 0.75,
+                borderLeftColor: "transparent",
+                borderRightColor: "transparent",
+                borderTopColor: "white",
+              }}
+            />
+          ))}
+        </View>
         <View
           className="flex-row overflow-hidden"
           style={{
             paddingHorizontal: sizes.gap * 0.57,
-            paddingVertical: sizes.gap * 3,
+            paddingVertical: sizes.gap * 1.5,
           }}
         >
           {/* Watermark */}
@@ -116,7 +134,7 @@ export default function ProfileTab() {
             {/* Label */}
             <Text
               className="font-salbabida text-center text-[#523F43] leading-none"
-              style={{ fontSize: sizes.title }}
+              style={{ fontSize: sizes.title, marginTop: sizes.gap * 0.5 }}
             >
               KUITTI
             </Text>
@@ -510,6 +528,23 @@ export default function ProfileTab() {
               </Text>
             </View>
           </View>
+        </View>
+        <View className="flex-row">
+          {Array.from({ length: 24 }).map((_, i) => (
+            <View
+              key={i}
+              style={{
+                width: 0,
+                height: 0,
+                borderLeftWidth: sizes.edge,
+                borderRightWidth: sizes.edge,
+                borderTopWidth: sizes.edge * 0.75,
+                borderLeftColor: "white",
+                borderRightColor: "white",
+                borderTopColor: "transparent",
+              }}
+            />
+          ))}
         </View>
       </View>
     </SafeAreaView>
