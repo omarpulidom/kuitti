@@ -109,6 +109,13 @@ const config: Config = {
         'geist-mono-black-italic': [
           AppFontNames.GeistMono_900Black_Italic,
         ],
+
+        merchant: [
+          AppFontNames.Merchant,
+        ],
+        salbabida: [
+          AppFontNames.Salbabida,
+        ],
       },
     },
   },

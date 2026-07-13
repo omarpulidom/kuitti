@@ -31,6 +31,9 @@ export const AppFontNames = {
   GeistMono_800ExtraBold_Italic: 'GeistMono_800ExtraBold_Italic',
   GeistMono_900Black: 'GeistMono_900Black',
   GeistMono_900Black_Italic: 'GeistMono_900Black_Italic',
+
+  Merchant: 'Merchant',
+  Salbabida: 'Salbabida',
 } as const satisfies {
   [key in AppFontKeys]: AppFontKeys
 }
