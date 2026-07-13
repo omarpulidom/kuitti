@@ -42,9 +42,11 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.pm.kuitti",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSMotionUsageDescription": "Used for tilting the ID card with gyroscope."
       },
-      "buildNumber": "1"
+      "buildNumber": "1",
+      "appleTeamId": "C5TXZNQR66"
     },
     "android": {
       "adaptiveIcon": {
