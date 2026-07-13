@@ -151,7 +151,7 @@ export default function ProfileTab() {
             <View style={{ position: "relative" }}>
               {/* Separator */}
               <Text
-                className="font-merchant text-center text-[#C6C6C6]"
+                className="font-merchant text-center text-[#E0E0E0]"
                 style={{
                   fontSize: sizes.content,
                   position: "absolute",
@@ -318,7 +318,7 @@ export default function ProfileTab() {
             </View>
             {/* Separator */}
             <Text
-              className="font-merchant text-center text-[#C6C6C6]"
+              className="font-merchant text-center text-[#E0E0E0]"
               style={{
                 fontSize: sizes.content,
                 alignSelf: "center",
