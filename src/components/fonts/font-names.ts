@@ -13,6 +13,8 @@ export const AppFontNames = {
 
   GFSDidot_400Regular: 'GFSDidot_400Regular',
 
+  LibreBarcode39_400Regular: 'LibreBarcode39_400Regular',
+
   GeistMono_100Thin: 'GeistMono_100Thin',
   GeistMono_100Thin_Italic: 'GeistMono_100Thin_Italic',
   GeistMono_200ExtraLight: 'GeistMono_200ExtraLight',

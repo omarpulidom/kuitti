@@ -30,6 +30,7 @@ import {
   GeistMono_900Black_Italic,
 } from '@expo-google-fonts/geist-mono'
 import { GFSDidot_400Regular } from '@expo-google-fonts/gfs-didot'
+import { LibreBarcode39_400Regular } from '@expo-google-fonts/libre-barcode-39'
 
 const LocalFonts = {
   Merchant: require('@/assets/fonts/Merchant_Regular.ttf'),
@@ -48,6 +49,8 @@ export const AppFonts = {
   Doto_900Black,
 
   GFSDidot_400Regular,
+
+  LibreBarcode39_400Regular,
 
   GeistMono_100Thin,
   GeistMono_100Thin_Italic,

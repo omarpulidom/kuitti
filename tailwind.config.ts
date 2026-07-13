@@ -51,6 +51,10 @@ const config: Config = {
           'serif',
         ],
 
+        'barcode-39': [
+          AppFontNames.LibreBarcode39_400Regular,
+        ],
+
         'geist-mono': [
           AppFontNames.GeistMono_400Regular,
           'monospace',
