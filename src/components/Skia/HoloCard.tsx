@@ -20,7 +20,7 @@ import {
 import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 
 const HOLO_TEXTURE = require("@/assets/textures/holo.png");
-const HOLO_OPACITY = 0.7;
+const HOLO_OPACITY = 0.5;
 
 const SHIMMER_COLORS = [
   "rgba(0, 0, 0, 0)",
