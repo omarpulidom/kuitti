@@ -114,6 +114,9 @@ const config: Config = {
           AppFontNames.GeistMono_900Black_Italic,
         ],
 
+        'biro-script': [
+          AppFontNames.BiroScript,
+        ],
         merchant: [
           AppFontNames.Merchant,
         ],

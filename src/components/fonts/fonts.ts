@@ -33,6 +33,7 @@ import { GFSDidot_400Regular } from '@expo-google-fonts/gfs-didot'
 import { LibreBarcode39_400Regular } from '@expo-google-fonts/libre-barcode-39'
 
 const LocalFonts = {
+  BiroScript: require('@/assets/fonts/Biro_Script_Regular.ttf'),
   Merchant: require('@/assets/fonts/Merchant_Regular.ttf'),
   Salbabida: require('@/assets/fonts/Salbabida_Regular.otf'),
 } as const
@@ -71,6 +72,7 @@ export const AppFonts = {
   GeistMono_900Black,
   GeistMono_900Black_Italic,
 
+  BiroScript: LocalFonts.BiroScript,
   Merchant: LocalFonts.Merchant,
   Salbabida: LocalFonts.Salbabida,
 } as const
