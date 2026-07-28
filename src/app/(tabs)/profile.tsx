@@ -23,7 +23,7 @@ export default function ProfileTab() {
   return (
     <SafeAreaView className="flex-1 items-center p-8 bg-gray-50">
       <View
-        className="w-full bg-gray-200/35"
+        className="w-full bg-gray-100"
         onLayout={(e) => {
           setTicketRenderSize({
             width: e.nativeEvent.layout.width,
